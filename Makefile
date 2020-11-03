@@ -14,7 +14,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
-	gcc -o test main.c -L ./ -lasm
+	gcc -o main main.c -L ./ -lasm
 		
 %.o : %.s
 	nasm $(NASM_LINUX) -s -o $@ $<
