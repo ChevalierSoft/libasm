@@ -6,6 +6,9 @@ SRCS		= hello.s
 NASM_LINUX	= -felf64
 LD_LINUX	= -no_pie
 
+# -lc for extern libraries if used
+# strip and sstrip compress the exrcutable
+
 all :
 	nasm $(NASM_LINUX) $(SRCS)
 	ld $(LD_LINUX) -arch x86_64 *.o -o $(NAME)
