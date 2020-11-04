@@ -1,7 +1,14 @@
-section .text
 			global ft_strlen
 
-ft_strlen:	
-			mov		r8, 123
-			mov		rax, r8	; return r8
-			ret
+			section .text
+
+ft_strlen:	mov		rax, 0
+			movzx	r8, Byte[rdi]	; return (rax)
+
+while:		cmp		r8, 0			; while (r8)
+			je		return
+			inc		rax
+			movzx	r8, Byte[rdi + rax]
+			jmp		while
+
+return:		ret

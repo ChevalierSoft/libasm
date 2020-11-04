@@ -2,7 +2,9 @@ NAME		= libasm.a
 
 OBJS		= $(SRCS:.s=.o)
 
-SRCS		= ft_strlen.s
+SRCS		= \
+ft_strlen.s \
+ctoi.s
 
 NASM_LINUX	= -f elf64
 LD_LINUX	= -no_pie
