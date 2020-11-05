@@ -5,15 +5,29 @@
 int		ft_strlen(char *s);
 int		ctoi(char *c);
 char 	*ft_strcpy(char *s, char *d);
+int		ft_strcmp(const char *s1, const char *s2);
 
+void	test_ft_strcmp(void);
 void	test_ft_strlen(void);
 void	test_ft_strcpy(void);
 
 int		main(int argc, char **argv)
 {
-	test_ft_strlen();
-	test_ft_strcpy();
+	//test_ft_strlen();
+	//test_ft_strcpy();
+	test_ft_strcmp();
 	return (0);
+}
+
+void	test_ft_strcmp(void)
+{
+	char s[] = "0123";
+	char d[] = "0123";
+
+	printf("\n_________ ft_strcmp ________\n");
+	printf("ft_strcmp : %d\n", ft_strcmp(s, d));
+	printf("strcmp    : %d\n", strcmp(s, d));
+	printf("____________________________\n");
 }
 
 void	test_ft_strlen(void)

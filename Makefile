@@ -10,6 +10,7 @@ OBJS		= $(SRCS:.s=.o)
 SRCS		= \
 ft_strlen.s \
 ft_strcpy.s \
+ft_strcmp.s \
 ctoi.s
 
 
