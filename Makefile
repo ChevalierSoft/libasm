@@ -1,13 +1,17 @@
 NAME		= libasm.a
 
+FLAGS		= -fsanitize=address
+
+NASM_LINUX	= -f elf64
+LD_LINUX	= -no_pie
+
 OBJS		= $(SRCS:.s=.o)
 
 SRCS		= \
 ft_strlen.s \
+ft_strcpy.s \
 ctoi.s
 
-NASM_LINUX	= -f elf64
-LD_LINUX	= -no_pie
 
 # -lc for extern libraries if used
 # strip and sstrip compress the exrcutable
@@ -32,5 +36,6 @@ clean :
 
 fclean : clean
 	rm -f $(NAME)
+	rm -f main
 
 .PHONY : all clean fclean $(NAME)
