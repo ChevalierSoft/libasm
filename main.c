@@ -6,7 +6,7 @@ int		ft_strlen(char *s);
 int		ctoi(char *c);
 char 	*ft_strcpy(char *s, char *d);
 int		ft_strcmp(const char *s1, const char *s2);
-void	*ft_strdup(int n);
+char	*ft_strdup(char *s);
 
 void	test_ft_strcmp(void);
 void	test_ft_strlen(void);
@@ -26,9 +26,7 @@ void	test_ft_strdup(void)
 {
 	char *pt;
 
-	//printf("%d", ft_strdup("0123456"));
-	pt = ft_strdup(8);
-	ft_strcpy(pt, "qweasd");
+	pt = ft_strdup("yay");
 	printf("%s", pt);
 	free(pt);
 }
