@@ -11,6 +11,7 @@ SRCS		= \
 ft_strlen.s \
 ft_strcpy.s \
 ft_strcmp.s \
+ft_strdup.s \
 ctoi.s
 
 
@@ -39,4 +40,6 @@ fclean : clean
 	rm -f $(NAME)
 	rm -f main
 
-.PHONY : all clean fclean $(NAME)
+re : fclean all
+
+.PHONY : all clean fclean $(NAME) re
