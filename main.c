@@ -39,6 +39,9 @@ void	test_ft_strcmp(void)
 	printf("ft_strcmp : %d\n", ft_strcmp(s1, s3));
 	printf("strcmp    : %d\n",    strcmp(s1, s3));
 
+	printf("ft_strcmp : %d\n", ft_strcmp(s1, s4));
+	printf("strcmp    : %d\n",    strcmp(s1, s4));
+
 	printf("ft_strcmp : %d\n", ft_strcmp(s4, s1));
 	printf("strcmp    : %d\n",    strcmp(s4, s1));
 	printf("____________________________\n");
