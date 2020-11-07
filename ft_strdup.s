@@ -7,9 +7,10 @@ extern ft_strlen
 			section .text
 
 ft_strdup:
-			push rdi
-			call ft_strlen
-			pop rdi
+			;push rdi
+			mov		rax, rdi
+			call malloc WRT ..plt
+			;pop rdi
 
 return:
 			ret
