@@ -21,12 +21,26 @@ int		main(int argc, char **argv)
 
 void	test_ft_strcmp(void)
 {
-	char s1[] = "123";
+	char s1[] = "012345678901234567890123456789";
 	char s2[] = "123";
+	char s3[] = "";
+	char s4[] = "01234";
 
 	printf("\n_________ ft_strcmp ________\n");
+	printf("ft_strcmp : %d\n", ft_strcmp(s1, s1));
+	printf("strcmp    : %d\n",    strcmp(s1, s1));
+
 	printf("ft_strcmp : %d\n", ft_strcmp(s1, s2));
 	printf("strcmp    : %d\n",    strcmp(s1, s2));
+
+	printf("ft_strcmp : %d\n", ft_strcmp(s2, s1));
+	printf("strcmp    : %d\n",    strcmp(s2, s1));
+
+	printf("ft_strcmp : %d\n", ft_strcmp(s1, s3));
+	printf("strcmp    : %d\n",    strcmp(s1, s3));
+
+	printf("ft_strcmp : %d\n", ft_strcmp(s4, s1));
+	printf("strcmp    : %d\n",    strcmp(s4, s1));
 	printf("____________________________\n");
 }
 
