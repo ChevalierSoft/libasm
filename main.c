@@ -21,12 +21,12 @@ int		main(int argc, char **argv)
 
 void	test_ft_strcmp(void)
 {
-	char s[] = "0123";
-	char d[] = "0123";
+	char s1[] = "123";
+	char s2[] = "123";
 
 	printf("\n_________ ft_strcmp ________\n");
-	printf("ft_strcmp : %d\n", ft_strcmp(s, d));
-	printf("strcmp    : %d\n", strcmp(s, d));
+	printf("ft_strcmp : %d\n", ft_strcmp(s1, s2));
+	printf("strcmp    : %d\n",    strcmp(s1, s2));
 	printf("____________________________\n");
 }
 
