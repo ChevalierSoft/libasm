@@ -13,7 +13,7 @@ while:
 			mov		r8b, [rdi + rax]
 			sub		r8b, [rsi + rax]
 			jne		return
-			inc		rax+
+			inc		rax
 			jmp		while
 
 return:
