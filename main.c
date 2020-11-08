@@ -27,7 +27,18 @@ void	test_ft_strdup(void)
 	char *pt;
 
 	pt = ft_strdup("bbb");
-	//strcpy(pt, "yay");
+	printf("[%s] | %p\n", pt, pt);
+	free(pt);
+
+	pt = ft_strdup("abcdefghijklmnopqrstuvwxyz");
+	printf("[%s] | %p\n", pt, pt);
+	free(pt);
+
+	pt = ft_strdup("");
+	printf("[%s] | %p\n", pt, pt);
+	free(pt);
+
+	pt = ft_strdup("abcdefghijklmnopqrstuvwxyz01234567890123456789012345678901234567890123456789012345678901234567890");
 	printf("[%s] | %p\n", pt, pt);
 	free(pt);
 }
