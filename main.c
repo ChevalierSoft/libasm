@@ -1,26 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <errno.h>
 
 int		ft_strlen(char *s);
 int		ctoi(char *c);
 char 	*ft_strcpy(char *s, char *d);
 int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strdup(char *s);
+void	ft_write(int fd, const void *buf, size_t count);
 
 void	test_ft_strcmp(void);
 void	test_ft_strlen(void);
 void	test_ft_strcpy(void);
 void	test_ft_strdup(void);
+void	test_write(void);
 
 int		main(int argc, char **argv)
 {
 	//test_ft_strlen();
 	//test_ft_strcpy();
 	//test_ft_strcmp();
-	test_ft_strdup();
+	//test_ft_strdup();
+	test_write();
 	return (0);
 }
+
+void	test_write(void)
+{
+	ft_write(1, "lolilol\n", 7);
+}
+
 
 void	test_ft_strdup(void)
 {
