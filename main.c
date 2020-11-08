@@ -27,6 +27,7 @@ void	test_ft_strdup(void)
 	char *pt;
 
 	pt = ft_strdup("yay");
+	strcpy(pt, "yay");
 	printf("%s", pt);
 	free(pt);
 }
@@ -61,10 +62,10 @@ void	test_ft_strcmp(void)
 
 void	test_ft_strlen(void)
 {
-	char s[] = "abcdefgghijklmnopqrstuvwxyz";
-
 	printf("\n_________ ft_strlen ________\n");
-	printf("len :	%d\n", ft_strlen(s));
+	printf("len 1 :	%d\n", ft_strlen("abcdefghijklmnopqrstuvwxyz"));
+	printf("len 2 :	%d\n", ft_strlen("yay"));
+	printf("len 2 :	%d\n", ft_strlen(""));
 	printf("____________________________\n");
 }
 
