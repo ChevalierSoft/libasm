@@ -13,16 +13,18 @@ ft_strdup:
 			call	ft_strlen
 			inc		rax					; rax = len
 
-			mov		rdx, rdi			; rdx = &s1
+			;mov		rdx, rdi			; rdx = &s1
+			push	rdi
 			mov		rdi, rax			; rdi = len
 
 			call	malloc	WRT ..plt	; malloc(sizeof(len))
 
+			;mov		rsi, rdx			; s2 = s
+			pop		rsi
 			mov		rdi, rax			; s1 = pt
-			mov		rsi, rdx			; s2 = s
 			
 			;call	strcpy	WRT ..plt
-			;mov		byte[rax], 97
+			mov		byte[rax], 97
 
 			;push	rsi
 			;push	rdi
