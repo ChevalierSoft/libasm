@@ -26,9 +26,9 @@ void	test_ft_strdup(void)
 {
 	char *pt;
 
-	pt = ft_strdup("yay");
-	strcpy(pt, "yay");
-	printf("%s", pt);
+	pt = ft_strdup("bbb");
+	//strcpy(pt, "yay");
+	printf("[%s] | %p\n", pt, pt);
 	free(pt);
 }
 

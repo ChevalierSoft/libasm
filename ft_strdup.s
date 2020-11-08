@@ -1,7 +1,9 @@
 extern malloc
 extern ft_strcpy
 extern ft_strlen
+
 extern putchar
+extern strcpy
 
 			global ft_strdup
 
@@ -9,22 +11,23 @@ extern putchar
 
 ft_strdup:
 			call	ft_strlen
-			inc		rax					; rx = len
-			;;push	rax
+			inc		rax					; rax = len
 
-			mov		r9, rdi				; r9 = &s1
-			mov		rdi, rax
+			mov		rdx, rdi			; rdx = &s1
+			mov		rdi, rax			; rdi = len
 
-			call	malloc	WRT ..plt	; malloc(sizeof(arg[1]))
+			call	malloc	WRT ..plt	; malloc(sizeof(len))
 
-			;;pop		rdi
-			;mov		rdi, rdx			; s2 = pt
-			;mov		rsi, r9				; s1 = r9
+			mov		rdi, rax			; s1 = pt
+			mov		rsi, rdx			; s2 = s
 			
+			;call	strcpy	WRT ..plt
+			;mov		byte[rax], 97
+
 			;push	rsi
 			;push	rdi
-			;call	ft_strcpy
+			call	ft_strcpy
 			;pop		rdi
 			;pop		rsi
-			
+			;mov		rax, rdi	
 			ret
