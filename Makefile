@@ -13,7 +13,7 @@ ft_strcpy.s \
 ft_strcmp.s \
 ft_strdup.s \
 ft_write.s \
-ctoi.s
+ft_read.s
 
 
 # -lc for extern libraries if used
