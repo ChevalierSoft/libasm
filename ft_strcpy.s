@@ -15,3 +15,4 @@ while:		cmp		Byte[rsi + rax], 0
 return:		mov		Byte[rdi + rax], 0
 			mov		rax, rdi
 			ret
+

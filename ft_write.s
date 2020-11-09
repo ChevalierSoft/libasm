@@ -18,3 +18,4 @@ error:
 			mov		[rax], rdx
 			mov		rax, -1
 			ret
+
