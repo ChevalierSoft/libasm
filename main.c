@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
+#include <unistd.h>
 
 int		ft_strlen(char *s);
 int		ctoi(char *c);
@@ -28,7 +29,13 @@ int		main(int argc, char **argv)
 
 void	test_write(void)
 {
-	ft_write(1, "lolilol\n", 7);
+	errno = 0;
+	ft_write(6, "lolilol\n", 7);
+	perror("ft_write ");
+
+	errno = 0;
+	write(6, "lolilol\n", 7);
+	perror("write ");
 }
 
 
