@@ -16,3 +16,5 @@ return (rax)
 
 - http://www.lacl.fr/tan/asm
 
+- https://www.cs.uaf.edu/2011/fall/cs301/lecture/10_05_strings.html
+
