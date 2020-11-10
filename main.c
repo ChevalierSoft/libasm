@@ -3,6 +3,13 @@
 #include <string.h>
 #include <errno.h>
 #include <unistd.h>
+#include <fcntl.h>
+
+#define READ(x, y, z) ft_read(x, y, z)
+//#define READ(x, y, z) read(x, y, z)
+
+#define WRITE(x, y, z) ft_write(x, y, z)
+//#define WRITE(x, y, z) write(x, y, z)
 
 int		ft_strlen(char *s);
 int		ctoi(char *c);
@@ -18,6 +25,7 @@ void	test_ft_strcpy(void);
 void	test_ft_strdup(void);
 void	test_write(void);
 void	test_read(void);
+void	display_file(char *file_name);
 
 int		main(int argc, char **argv)
 {
@@ -26,8 +34,24 @@ int		main(int argc, char **argv)
 	//test_ft_strcmp();
 	//test_ft_strdup();
 	//test_write();
-	test_read();
+	//test_read();
+	display_file("ft_strlen.s");
+	//display_file("m.c");
 	return (0);
+}
+
+void	display_file(char *file_name)
+{
+	int fd;
+	char buf[1];
+
+	fd = open(file_name, O_RDONLY);	
+	while (READ(fd, buf, 1) > 0)
+	{
+		WRITE(1, buf, 1);
+	}
+	perror("real_file");
+	close(fd);
 }
 
 void test_read(void)
